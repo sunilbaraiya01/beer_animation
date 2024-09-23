@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0e6052;
+  }
+  
+  .glass {
+    position: relative;
+    width: 150px;
+    height: 250px;
+    background-color: transparent;
+    border: 10px solid #d3f02e;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+  }
+  
+  .cold-drink {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: rgb(48, 27, 25);
+    animation: fillDrink 5s ease-in-out forwards;
+  }
+  
+  .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  #name{
+    color: #2ef03b;
+  }
+  #b1{
+    color: #2ebff0;
+  }
+  
+  .bubbles span {
+    position: absolute;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    animation: riseBubbles 3s infinite ease-in-out;
+  }
+  
+  .bubbles span:nth-child(1) {
+    left: 20%;
+    animation-delay: 0.5s;
+  }
+  
+  .bubbles span:nth-child(2) {
+    left: 40%;
+    animation-delay: 1s;
+  }
+  
+  .bubbles span:nth-child(3) {
+    left: 60%;
+    animation-delay: 1.5s;
+  }
+  
+  .bubbles span:nth-child(4) {
+    left: 80%;
+    animation-delay: 2s;
+  }
+  
+  @keyframes fillDrink {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+  
+  @keyframes riseBubbles {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    100% {
+      bottom: 100%;
+      opacity: 0;
+    }
+  }
